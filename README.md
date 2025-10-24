@@ -29,7 +29,6 @@ User → Streamlit UI → AI Generator → CRM Sender → Performance Analyzer �
 * **Python 3.9+**, **Streamlit**
 * **OpenAI API** (`gpt-4o-mini`)
 * **Requests**, **dotenv**, **pandas**
-* *(Optional)* HubSpot API for real email campaigns
 
 ---
 
