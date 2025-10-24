@@ -11,7 +11,7 @@ def analyze_performance():
     load_dotenv()
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-    # 模拟每个 persona 的表现数据
+
     personas = ["Founder", "Creative Professional", "Operations Manager"]
     performance_data = {}
 
@@ -22,13 +22,13 @@ def analyze_performance():
             "unsubscribe_rate": round(random.uniform(0.0, 0.05), 2)
         }
 
-    # 保存到 performance_log.json
+
     log_filename = "performance_log.json"
     with open(log_filename, "w") as f:
         json.dump(performance_data, f, indent=2)
     print(f"✅ Performance data saved to {log_filename}")
 
-    # 用 AI 生成分析总结
+
     prompt = f"""
     You are a marketing analyst. Here is the newsletter performance data by persona:
     {json.dumps(performance_data, indent=2)}
